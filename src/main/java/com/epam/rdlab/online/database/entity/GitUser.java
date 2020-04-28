@@ -11,7 +11,6 @@ import javax.persistence.Id;
 @Entity
 @JsonIgnoreProperties(ignoreUnknown = true)
 @NoArgsConstructor
-@Getter
 public class GitUser {
 
 	private String login;
@@ -26,4 +25,40 @@ public class GitUser {
 	// wrong. should be in domain object
 	@Setter
 	private String hasOpenPR = "NULL";
+
+	public String getLogin() {
+		return login;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public String getNode_id() {
+		return node_id;
+	}
+
+	public String getAvatar_url() {
+		return avatar_url;
+	}
+
+	public String getUrl() {
+		return url;
+	}
+
+	public String getHtml_url() {
+		return html_url;
+	}
+
+	public String getRepos_url() {
+		return repos_url;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public String getHasOpenPR() {
+		return hasOpenPR;
+	}
 }
