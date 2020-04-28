@@ -98,7 +98,7 @@ public class GitSearchService {
 				userResultList.add(gitRepo.getOwner());
 			});
 		}
-
+		/*
 		for (GitUser u : userResultList) {
 			u.setHasOpenPR("");
 			StringBuilder sb2 = new StringBuilder(PULL_SEARCH_API_URL);
@@ -117,7 +117,7 @@ public class GitSearchService {
 				}
 			}
 		}
-
+		*/
 		return userResultList;
 	}
 
