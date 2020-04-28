@@ -18,7 +18,7 @@ import java.time.LocalDateTime;
 import java.util.*;
 
 @Controller
-@RequestMapping("/board")
+@RequestMapping("/")
 @RequiredArgsConstructor
 public class StudentBoardController {
 
@@ -32,7 +32,7 @@ public class StudentBoardController {
 	@Value("${student.board.rdlab.login}")
 	private String repoPrefix;
 
-	@GetMapping
+	@GetMapping("board")
 	public String buildStartPage(Model model) {
 		List<GitUser> userList = searchService.findGitUsersByLogin(userLoginList);
 		model.addAttribute("userList", userList);
@@ -70,7 +70,7 @@ public class StudentBoardController {
 		return "board";
 	}
 
-	@GetMapping("time")
+	@GetMapping("board/time")
 	@ResponseBody
 	public String getTime() {
 		return LocalDateTime.now().toString();

@@ -110,7 +110,7 @@
 
         <ul class="list-items" th:each="user : ${collectionList}">
             <li>
-                Student: <span th:text="${user.login}"/>
+                Student: <span th:text="${user.login}"/><span th:text="${user.hasOpenPR}"/>
             </li>
         </ul>
 
@@ -124,7 +124,7 @@
 
         <ul class="list-items" th:each="user : ${exceptionList}">
             <li>
-                Student: <span th:text="${user.login}"/>
+                Student: <span th:text="${user.login}"/><span th:text="${user.hasOpenPR}"/>
             </li>
         </ul>
 
@@ -138,7 +138,7 @@
 
         <ul class="list-items" th:each="user : ${springcoreList}">
             <li>
-                Student: <span th:text="${user.login}"/>
+                Student: <span th:text="${user.login}"/><span th:text="${user.hasOpenPR}"/>
             </li>
         </ul>
 
@@ -152,7 +152,7 @@
 
         <ul class="list-items" th:each="user : ${jdbcList}">
             <li>
-                Student: <span th:text="${user.login}"/>
+                Student: <span th:text="${user.login}"/><span th:text="${user.hasOpenPR}"/>
             </li>
         </ul>
 
@@ -166,7 +166,7 @@
 
         <ul class="list-items" th:each="user : ${dataList}">
             <li>
-                Student: <span th:text="${user.login}"/>
+                Student: <span th:text="${user.login}"/><span th:text="${user.hasOpenPR}"/>
             </li>
         </ul>
 
@@ -180,7 +180,7 @@
 
         <ul class="list-items" th:each="user : ${httpList}">
             <li>
-                Student: <span th:text="${user.login}"/>
+                Student: <span th:text="${user.login}"/><span th:text="${user.hasOpenPR}"/>
             </li>
         </ul>
 
@@ -194,7 +194,7 @@
 
         <ul class="list-items" th:each="user : ${finalList}">
             <li>
-                Student: <span th:text="${user.login}"/>
+                Student: <span th:text="${user.login}"/><span th:text="${user.hasOpenPR}"/>
             </li>
         </ul>
 
