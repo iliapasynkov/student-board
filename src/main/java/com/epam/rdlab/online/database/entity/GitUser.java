@@ -25,5 +25,5 @@ public class GitUser {
 
 	// wrong. should be in domain object
 	@Setter
-	private String hasOpenPR;
+	private String hasOpenPR = "NULL";
 }
