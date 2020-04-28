@@ -1,9 +1,7 @@
 package com.epam.rdlab.online.service.outbound;
 
-import com.epam.rdlab.online.database.entity.GitPullRequest;
 import com.epam.rdlab.online.database.entity.GitRepo;
 import com.epam.rdlab.online.database.entity.GitUser;
-import com.epam.rdlab.online.json.entity.SearchPullRequestEntity;
 import com.epam.rdlab.online.json.entity.SearchRepoEntity;
 import com.epam.rdlab.online.json.entity.SearchUserEntity;
 import lombok.RequiredArgsConstructor;
