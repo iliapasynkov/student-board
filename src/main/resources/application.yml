@@ -1,0 +1,34 @@
+student:
+    board:
+        logins:
+            - ilnar1999
+            - victortwin
+            - EgorDubovtsev
+            - Egor97
+            - ZavizionDenis
+            - sakorepanov
+            - PersonWithoutName
+            - VladislavShamshurin
+            - Pavel2688
+            - Hoodsay
+            - Alswede
+            - Ge5akl
+        rdlab:
+            login: java-online-course
+        topicToRepository:
+            "Collections": java-collections-template
+            "Data Handling": java-data-handling-template
+            "Exceptions": java-exceptions-template
+            "Final Project": final-project-template
+            "HTTP": http-template
+            "JDBC Template": java-jdbc-template
+            "Spring Core": spring-core-template
+
+spring:
+    security:
+        oauth2:
+            client:
+                registration:
+                    github:
+                        clientId: 3432d73303423964ed60
+                        clientSecret: b152bc213895e7a04f797ffe6d1f20990f8e65e8
