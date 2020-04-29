@@ -26,6 +26,6 @@ public class SearchService {
 
 	@Async
 	public CompletableFuture<Topic> findWhichGitUsersByForkedRepo(List<GitUser> userList, String repoName) {
-		return CompletableFuture.completedFuture(new Topic(repoName, gitSearchService.findWhichGitUsersByForkedRepo(userList, repoName)));
+		return CompletableFuture.supplyAsync(() -> new Topic(repoName, gitSearchService.findWhichGitUsersByForkedRepo(userList, repoName)));
 	}
 }

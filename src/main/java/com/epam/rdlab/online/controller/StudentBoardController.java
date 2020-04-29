@@ -3,7 +3,6 @@ package com.epam.rdlab.online.controller;
 import com.epam.rdlab.online.config.StudentBoardConfigProp;
 import com.epam.rdlab.online.database.entity.GitUser;
 import com.epam.rdlab.online.service.SearchService;
-import com.epam.rdlab.online.service.TopicCollectorFactory;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,6 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
+import java.util.stream.Collectors;
 
 @Controller
 @RequestMapping("/")
@@ -33,6 +33,8 @@ public class StudentBoardController {
 		for (String topic: topicToRepo.keySet()) {
 			futures.add(searchService.findWhichGitUsersByForkedRepo(userList, topic));
 		}
-		return futures.stream().map(CompletableFuture::join).collect(TopicCollectorFactory.getCollector());
+		return futures.stream()
+				.map(CompletableFuture::join)
+				.collect(Collectors.toList());
 	}
 }
